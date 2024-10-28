@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LalyVet</title>
+    <link rel="stylesheet" href="estilos/Style_contactanos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <a href="index.php"><img src="img/logo.png" alt=""></a>
+        <button class="menu-toggle">&#9776;</button>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="quienes_somos.html">¿Quienes somos?</a></li>
+            <li><a href="contactanos.html">Contactanos</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <div class="form">
+            <h2>¿Deseas agendar una cita para tu peludito?</h2>
+            <img src="img/peluditos.jpg" alt="">
+            <p>Comparte tu información con nosotros, y te abriremos un espacio en nuestra agenda:</p>
+            <form method="POST" id="formulario" class="formulario" action="" enctype="multipart/form-data">
+
+                <div class="pinput">
+                    <p>Nombre Completo:</p>
+                    <input type="text" name="txtNombre" placeholder="Nombre completo" value="" required>
+                </div>
+
+                <div class="pinput">
+                    <p>Numero telefónico:</p>
+                    <input type="number" name="txtCelular" placeholder="Numero Telefónico" value="" required>
+                </div>
+
+                <div class="pinput">
+                    <p>Correo Electrónico:</p>
+                    <input type="email" name="txtCorreo" placeholder="Correo electrónico" value="" required>
+                </div>
+
+                <div class="pinput">
+                    <p>Tipo de Inmueble: <span class="asterisco">*</span></p>
+                    <select name="tipo-inmueble" id="tipo-inmueble" required>
+                        <option value="nada">Seleccionar...</option>
+                        <option value="">Nebulización</option>
+                        <option value="">Hospitalización</option>
+                        <option value="">Cirugías</option>
+                        <option value="">Laboratorio</option>
+                        <option value="">Consulta de Nutrición</option>
+                        <option value="">Cardiología</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="botones_flotantes">
+        <a href="https://wa.me/573138973629?text=Hola%20LalyVet,%20estoy%20interesado/a%20en%20sus%20servicios" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+    </div>
+
+    <footer class="pie">
+
+        <img src="img/logo.png" alt="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7958.879541747775!2d-75.10023235969038!3d4.133553734326644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e392ef774b7d59f%3A0x50a62260541e2bf0!2sSan%20Luis%2C%20San%20Lu%C3%ADs%2C%20Tolima!5e0!3m2!1ses-419!2sco!4v1729974443409!5m2!1ses-419!2sco" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="texto_pie">
+            <div class="info">
+                <img src="img/telefono.png" alt="">
+                <p>+57 313 897 3629</p>
+            </div>
+            <div class="info">
+                <img src="img/direccion.png" alt="">
+                <div id="dople_p">
+                    <p>Cll 4 #3-10</p>
+                    <p>San Luis, Tolima</p>
+                </div>
+            </div>
+            <div class="info">
+                <img src="img/correo.png" alt="">
+                <p>lalyvet@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <p class="copy">Todos los derechos reservados. - Copyright 2024 ©</p>
+
+    <script src="js/carrusel.js"></script>
+    <script src="js/menu_hamburguesa.js"></script>
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            alert("¡Ya se agendó tu cita!");
+    
+            window.location.href = "contactanos.html";
+        });
+    </script>
+
+    <div class="overlay"></div>
+</body>
+
+</html>
